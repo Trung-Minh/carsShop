@@ -1,0 +1,29 @@
+extends ../../layouts/default.pug
+
+block main
+    div.container-fluid.main-container
+        h2.text-center.mb-4 Quản lý xe
+        p.text-center.text-muted.lead.mb-4
+            | Tại đây bạn có thể thực hiện các thao tác như xem, thêm, hoặc xóa thông tin xe.
+        div.d-flex.justify-content-center.gap-3.mb-4
+            a(href="/admin")
+                button.btn.btn-primary.button CARS
+            a(href="/admin/cars/viewCars")
+                button.btn.btn-secondary.button VIEW
+            a(href="/admin/cars/insertCarView")
+                button.btn.btn-secondary.button INSERT
+            a(href="/admin/cars/deleteCarView")
+                button.btn.btn-secondary.button DELETE
+        hr.mb-4
+        form(action="/admin/cars/deleteCar" method="POST")
+            div.form-group
+                label Hãng xe
+                input.form-control(name="hangXe" type="text" placeholder="Nhập hãng xe cần xóa")
+            div.form-group
+                label Dòng xe
+                input.form-control(name="dongXe" type="text" placeholder="Nhập dòng xe cần xóa")
+            div.form-group
+                label Phiên bản
+                input.form-control(name="phienBan" type="text" placeholder="Nhập phiên bản xe cần xóa")
+            div.form-group
+                button.btn.btn-danger.btn-block(type="submit") XÓA XE

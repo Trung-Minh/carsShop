@@ -1,0 +1,42 @@
+extends ../../layouts/default.pug
+
+block main
+    div.container-fluid.main-container
+        h2.text-center.mb-4 Quản lý xe
+        p.text-center.text-muted.lead.mb-4
+            | Tại đây bạn có thể thực hiện các thao tác như xem, thêm, hoặc xóa thông tin xe.
+        div.d-flex.justify-content-center.gap-3.mb-4
+            a(href="/admin")
+                button.btn.btn-primary.button CARS
+            a(href="/admin/cars/viewCars")
+                button.btn.btn-secondary.button VIEW
+            a(href="/admin/cars/insertCarView")
+                button.btn.btn-secondary.button INSERT
+            a(href="/admin/cars/deleteCarView")
+                button.btn.btn-secondary.button DELETE
+        hr.mb-4
+        div
+            if cars
+                table.table.table-hover.table-striped.table-bordered.mt-3
+                    thead.table-header
+                        tr
+                            th Hãng xe
+                            th Dòng xe
+                            th Phiên bản
+                            th Phân khúc xe
+                            th Động cơ
+                            th Giá niêm yết
+                            th Đàm phán
+                    tbody
+                        each item in cars
+                            tr
+                                td #{item.HANGXE}
+                                td #{item.DONGXE}
+                                td #{item.PHIENBAN}
+                                td #{item.PHAN_KHUC_XE}
+                                td #{item.DONG_CO}
+                                td #{item.GIANIEMYET}
+                                td.text-left #{item.DAMPHAN}
+            else
+                p.text-center.text-danger Không có dữ liệu xe để hiển thị.
+

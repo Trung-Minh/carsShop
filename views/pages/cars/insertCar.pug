@@ -1,0 +1,41 @@
+extends ../../layouts/default.pug
+
+block main
+    div.container-fluid.main-container
+        h2.text-center.mb-4 Quản lý xe
+        p.text-center.text-muted.lead.mb-4
+            | Tại đây bạn có thể thực hiện các thao tác như xem, thêm, hoặc xóa thông tin xe.
+        div.d-flex.justify-content-center.gap-3.mb-4
+            a(href="/admin")
+                button.btn.btn-primary.button CARS
+            a(href="/admin/cars/viewCars")
+                button.btn.btn-secondary.button VIEW
+            a(href="/admin/cars/insertCarView")
+                button.btn.btn-secondary.button INSERT
+            a(href="/admin/cars/deleteCarView")
+                button.btn.btn-secondary.button DELETE
+        hr.mb-4
+        form(action="/admin/cars/insertCar" method="POST" class="mx-auto p-4 shadow-sm bg-light rounded" style="max-width: 600px;")
+            div.mb-3
+                label.form-label Hãng xe
+                input.form-control(name="hangXe" type="text" placeholder="Nhập tên hãng xe")
+            div.mb-3
+                label.form-label Dòng xe
+                input.form-control(name="dongXe" type="text" placeholder="Nhập tên dòng xe")
+            div.mb-3
+                label.form-label Phiên bản
+                input.form-control(name="phienBan" type="text" placeholder="Nhập tên phiên bản")
+            div.mb-3
+                label.form-label Giá niêm yết
+                input.form-control(name="giaNiemYet" type="text" placeholder="Nhập giá niêm yết")
+            div.mb-3
+                label.form-label Phân khúc
+                input.form-control(name="phanKhuc" type="text" placeholder="Nhập phân khúc xe")
+            div.mb-3
+                label.form-label Động cơ
+                input.form-control(name="dongCo" type="text" placeholder="Nhập tên động cơ")
+            div.mb-3
+                label.form-label Đàm phán
+                input.form-control(name="damPhan" type="text" placeholder="Nhập ưu đãi/ khuyến mãi")
+            div.text-center.mt-4
+                button.btn.btn-primary(type="submit") THÊM XE

@@ -1,0 +1,103 @@
+/* Vùng chứa chính */
+.container {
+	max-width: 600px;
+	background-color: #f8f9fa;
+	padding: 2rem;
+	border-radius: 8px;
+	box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Căn chỉnh nút và hiệu ứng hover */
+.button {
+	width: 100%;
+	min-width: 120px;
+	transition: transform 0.3s ease, font-weight 0.3s ease;
+}
+
+.button:hover {
+	font-weight: bold;
+	transform: scale(1.05);
+}
+
+/* Màu nền cho vùng chứa rộng */
+.container-fluid {
+	background-color: #f8f9fa;
+}
+
+/* Khoảng cách */
+.mb-4 {
+	margin-bottom: 1.5rem !important;
+}
+
+/* Bảng dữ liệu */
+.table {
+	width: 100%;
+	text-align: center;
+}
+
+.table thead {
+	background-color: #343a40;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.table th,
+.table td {
+	vertical-align: middle;
+}
+
+.text-left {
+	text-align: left;
+	white-space: normal; /* Giúp ngắt dòng nếu nội dung dài */
+	word-wrap: break-word; /* Bẻ dòng nếu có từ dài */
+}
+
+/* Hiệu ứng hover cho hàng trong bảng */
+.table-hover tbody tr:hover {
+	background-color: #e9ecef;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+	h2,
+	p {
+		font-size: 1.2rem;
+	}
+	.button {
+		font-size: 0.9rem;
+	}
+}
+
+/* Định dạng form và căn giữa */
+form {
+	max-width: 700px; /* Rộng hơn so với form insertCar */
+	margin: 0 auto; /* Căn giữa form */
+	padding: 2rem;
+	background-color: #f8f9fa; /* Nền sáng */
+	border-radius: 8px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Bóng cho form */
+}
+
+/* Căn chỉnh các trường input */
+.form-group {
+	margin-bottom: 1rem;
+}
+
+/* Đảm bảo input có kiểu dáng đồng nhất */
+.form-control {
+	width: 100%; /* Làm cho input rộng hết vùng chứa */
+	padding: 0.75rem; /* Cải thiện độ thoải mái khi nhập */
+	border-radius: 5px; /* Bo tròn góc */
+	font-size: 1rem; /* Cỡ chữ dễ đọc */
+}
+
+/* Nút submit */
+.btn-block {
+	width: 100%; /* Nút rộng hết vùng chứa */
+}
+
+/* Hiệu ứng hover cho nút */
+button:hover {
+	transform: scale(1.05);
+	transition: transform 0.3s ease;
+}

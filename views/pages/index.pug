@@ -1,0 +1,17 @@
+extends ../layouts/default.pug
+
+block main
+	div.container.text-center.mt-5
+		h2.mb-4 Quản lý xe
+		p.lead.text-muted.mb-5
+			| Tại đây, bạn có thể quản lý thông tin xe bao gồm thêm, xem, và xóa dữ liệu.
+		a(href="/admin")
+			button.btn.btn-primary.btn-lg.mb-4.button CARS
+		hr
+		div.d-flex.justify-content-center.gap-3.mt-4
+			a(href="/admin/cars/viewCars")
+				button.btn.btn-secondary.btn-lg.button VIEW
+			a(href="/admin/cars/insertCarView")
+				button.btn.btn-secondary.btn-lg.button INSERT
+			a(href="/admin/cars/deleteCarView")
+				button.btn.btn-secondary.btn-lg.button DELETE
